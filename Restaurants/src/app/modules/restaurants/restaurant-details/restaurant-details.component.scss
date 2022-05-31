@@ -1,0 +1,44 @@
+.container-fluid{
+    display: flex;
+justify-content: flex-end;
+flex-direction: column;
+direction: rtl;
+}
+.card{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+    max-width: 600px;
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+.img{
+    display: flex;
+    align-items: center;
+}    
+}
+
+.label{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    cursor: pointer;
+    a{
+        color: black;
+        text-decoration: none;
+    }
+    a:hover{
+        background-color: rgba(102, 105, 105, 0.897);
+    }
+    
+}
+.manu{
+    display: flex;
+    text-align: center;
+    font-weight: 200;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: center;
+    flex-direction: column;
+}

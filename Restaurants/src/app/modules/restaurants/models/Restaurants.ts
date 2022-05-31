@@ -1,5 +1,4 @@
 export interface Restaurants{
-
     id?:string ,
     restaurant_id?: string,
     branch_type_id?: string,

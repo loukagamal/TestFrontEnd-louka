@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { BranchTypes } from '../models/BranchTypes';
-import { Restaurants } from '../models/Restaurants';
-import { RestaurantsDetails } from '../models/RestaurantsDetails';
-import { BranchTypesService } from '../Services/branch-types.service';
-import { RestaurantDetailsService } from '../Services/restaurant-details.service';
-import { RestaurantsService } from '../Services/restaurants.service';
+import { BranchTypes } from '../../restaurants/models/BranchTypes';
+import { Restaurants } from '../../restaurants/models/Restaurants';
+import { RestaurantsDetails } from '../../restaurants/models/RestaurantsDetails';
+import { BranchTypesService } from '../../restaurants/Services/branch-types.service';
+import { RestaurantDetailsService } from '../../restaurants/Services/restaurant-details.service';
+import { RestaurantsService } from '../../restaurants/Services/restaurants.service';
 
 @Component({
-  selector: 'app-restaurants-list',
-  templateUrl: './restaurants-list.component.html',
-  styleUrls: ['./restaurants-list.component.scss']
+  selector: 'app-layout',
+  templateUrl: './layout.component.html',
+  styleUrls: ['./layout.component.scss']
 })
-export class RestaurantsListComponent implements OnInit {
-  
+export class LayoutComponent implements OnInit {
+
   restaurants!:Restaurants[] ;
   ErrMsg=''
   restaurantsDatails! :RestaurantsDetails[];
@@ -34,18 +34,16 @@ export class RestaurantsListComponent implements OnInit {
 
     this.restaurantsService.getAllRestaurants().subscribe((res: any) => {
       this.restaurants = res.data;
-    
     });
 
     return this.restaurants;
 
 
   }
-
+ 
   getAllBranchTypes(){
     this.branchTypes.getAllBranchTypes().subscribe((res: any) => {
       this.branchTypesData = res.data;
-      console.log(res)
     });
 
     return this.branchTypesData;
@@ -56,4 +54,7 @@ export class RestaurantsListComponent implements OnInit {
     console.log(this.restaurants);
     
   }
+
+  
+
 }

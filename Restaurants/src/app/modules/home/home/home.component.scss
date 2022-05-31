@@ -1,0 +1,29 @@
+.navbar{
+    background-color: black;
+    width: 100%;
+}
+
+.card{
+ 
+    border: solid saddlebrown 2px;
+//     display: flex;
+// flex-direction: row;
+    
+}
+
+.card-body {
+    max-width: 500px;
+    
+}
+.carousel-inner{
+    justify-content: center;
+   
+}
+.footer-card{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    ul{li{
+        list-style: none;
+    }}
+}

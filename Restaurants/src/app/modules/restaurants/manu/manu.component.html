@@ -1,0 +1,37 @@
+
+<div class="row m-0 p-0" >
+    <div class="card rounded shadow-sm border-0 ">
+  
+      <div class="row m-0 p-0 justify-content-center">
+        <!-- <div class="spinner-border m-5" role="status">
+          <span class="sr-only">Loading...</span>
+        </div> -->
+        <div class="card-body col col-sm-12  col-md-6 col-xl-4"  *ngFor="let item of menu">
+          <div class="">
+            <img [src]="item.image" alt="img" class="img-fluid">
+            <h5> <a  class="text-dark">{{item.name}}</a></h5>
+            <p class="small text-muted font-italic"></p>
+            <div class="footer-card">
+              <ul class="list-inline small">
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                <li class="list-inline-item m-0"><i class="fa fa-star-o text-success"></i></li>
+              </ul>
+              <ul>
+
+                <li>     <select  id="countryCode" name="countryCode" style="max-width: 80px"
+                  class="custom-select form-control bg-white border-left-0 border-md h-100 font-weight-bold text-muted">
+                  <option value="" *ngFor="let prodct of item.products" >{{prodct.name}}</option>
+               
+              </select></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+  
+  
+      </div>
+    </div>
+  </div>
